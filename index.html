@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакты</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: #000000;
-            color: #ffffff;
-            font-family: 'Georgia', serif; /* Красивый шрифт с поддержкой курсива */
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+            color: #e0e0e0;
+            font-family: 'Dancing Script', cursive;
             text-align: center;
             display: flex;
             justify-content: center;
@@ -17,27 +18,53 @@
             margin: 0;
             padding: 20px;
             box-sizing: border-box;
+            overflow: hidden;
         }
         .contacts {
-            font-size: 1.5em;
-            font-style: italic;
-            line-height: 1.8;
-            opacity: 0.9;
-            border-left: 3px solid #666;
-            padding-left: 20px;
+            font-size: 2.5em;
+            font-weight: 700;
+            line-height: 1.6;
+            opacity: 0;
+            animation: fadeInUp 1.5s ease-out forwards;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+            border-left: 4px solid rgba(255, 255, 255, 0.2);
+            padding: 40px 30px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        .contacts a {
+            color: #e0e0e0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .contacts a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         @media (max-width: 600px) {
             .contacts {
-                font-size: 1.2em;
+                font-size: 1.8em;
+                padding: 30px 20px;
             }
         }
     </style>
 </head>
 <body>
     <div class="contacts">
-        Signal - cheshire.01<br>
-        Telegram - t.me/hachirocke<br>
-        Mail - hachirocke@proton.me
+        📱 Signal - <a href="https://signal.org/">cheshire.01</a><br>
+        💬 Telegram - <a href="https://t.me/hachirocke">t.me/hachirocke</a><br>
+        ✉️ Mail - <a href="mailto:hachirocke@proton.me">hachirocke@proton.me</a>
     </div>
 </body>
 </html>
